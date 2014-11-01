@@ -48,7 +48,6 @@ $(data.response.Shows).each(function (key, value) {
 
 
 /* AUTHORIZATION FOR TWITTER CALLZ */
-
 var oauth = OAuth({
     consumer: {
         public: 'v7iDwurLCpgB0Y7FOtWrhsWJR',
@@ -58,8 +57,8 @@ var oauth = OAuth({
 });
 
 var request_data = {
-    url: 'https://api.twitter.com/1/statuses/update.json?include_entities=true',
-    method: 'POST',
+    url: 'http://api.twitter.com/1.1/search/tweets.json',
+    method: 'GET',
     data: {
         status: 'Hello Ladies + Gentlemen, a signed OAuth request!'
     }
@@ -75,5 +74,5 @@ $.ajax({
     type: request_data.method,
     data: oauth.authorize(request_data, token)
 }).done(function (data) {
-    console.log("data");
+    console.log(data);
 });
