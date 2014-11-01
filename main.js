@@ -65,6 +65,11 @@ var request_data = {
     }
 };
 
+var token = {
+    public: '1378276146-TssuV3cT3fgt5ZYAt0cvzo2JQUnKDKxk8WVJ3N5',
+    secret: 'VqLtGr0PMUJcqpJOzAHiE6d1eQ8msWEXrfC6Oa7JDJFct'
+};
+
 $.ajax({
     url: request_data.url,
     type: request_data.method,
