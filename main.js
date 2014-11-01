@@ -44,3 +44,31 @@ $(data.response.Shows).each(function (key, value) {
 
 
 });
+
+
+
+/* AUTHORIZATION FOR TWITTER CALLZ */
+
+var oauth = OAuth({
+    consumer: {
+        public: 'v7iDwurLCpgB0Y7FOtWrhsWJR',
+        secret: 'ugTqAJPQjzi04gc63bmPBOjoTTDv9EoR3CsNTqbrjWryqLIMHu'
+    },
+    signature_method: 'HMAC-SHA1'
+});
+
+var request_data = {
+    url: 'https://api.twitter.com/1/statuses/update.json?include_entities=true',
+    method: 'POST',
+    data: {
+        status: 'Hello Ladies + Gentlemen, a signed OAuth request!'
+    }
+};
+
+$.ajax({
+    url: request_data.url,
+    type: request_data.method,
+    data: oauth.authorize(request_data, token)
+}).done(function (data) {
+    console.log("data");
+});
