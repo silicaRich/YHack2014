@@ -3,6 +3,19 @@ div.show {
     display: inline-block;
 vertical-align: top;
 }
+section.promo {
+    text-align: center;
+}
+
+.promo h1 {
+    font-size: 50px;
+    
+}
+
+.promo img {
+    display: block;
+    margin: auto;
+}
 
     div.show img {
     width:100%;

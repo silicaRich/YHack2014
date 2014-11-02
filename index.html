@@ -13,10 +13,10 @@
         <br />
         <br />
         <section class="promo">
-            <h2><img src="logo.png"/>TV Guide: </h2>
-
-            <input type="text" id="TVShow" />
-            <input type="submit" id="Submit" value="Submit">
+            <h1><img src="logo.png"/>TV Guide: </h1>
+            <h2>Find excellent shows.</h2>
+            <input type="text" id="TVShow" placeholder="Discover your new show" />
+            <a href="#results"><input type="submit" id="Submit" value="Submit"></a>
         </section>
     </div>
 
@@ -24,12 +24,14 @@
     <div class="hack">
     </div>
 
+    <div id="results"></div>
 
     <footer>
 
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="d3.min.js" charset="utf-8"></script>
         <script type="text/javascript" src="main.js"></script>
+    <script>$('input#submit').click(function () { displayShows();});</script>
     </footer>
 
 </body>
