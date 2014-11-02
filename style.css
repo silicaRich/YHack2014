@@ -11,20 +11,26 @@ section.promo {
     font-size: 50px;
     
 }
-
+footer p {
+text-align:center;
+}
 .promo img {
     display: block;
     margin: auto;
     width:auto;
     height:100px;
 }
+#results > h1 {
+font-size:50px;
+}
+
 
     div.show img {
     width:100%;
     }
 
 .show-title {
-font-size:20px;
+font-size:30px;
 }
 
 .viacom-logo {
@@ -35,7 +41,7 @@ font-size:20px;
 
     body {
     background-color: #262626;
-    font-family: 'OpenSans-Light';
+    font-family: 'OpenSans-Light', 'Tahoma';
     font-size: 14px;
     color: #4169e1;
     margin: 0;
@@ -45,7 +51,7 @@ font-size:20px;
 .header {
     background-color: #262626;
     -webkit-animation: pulse 10s infinite alternate;
-    font-family: 'OpenSans-Light';
+    font-family: 'OpenSans-Light' ,'Arial Rounded MT';
     font-size: 24px;
     color: #ffffff;
     height: 100%;
@@ -131,4 +137,18 @@ input {
 @font-face {
     font-family: 'OpenSans-LightItalic';
     src: url('OpenSans-LightItalic.ttf') format('truetype');
+}
+
+
+@media (max-width:440px) {
+    .show {
+        width: 100%!important;
+    }
+    body {
+        font-size: 75%!important;
+    }
+
+    .show-title {
+        font-size: 20px;
+    }1
 }
