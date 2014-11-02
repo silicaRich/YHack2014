@@ -111,3 +111,5 @@ setInterval(function(){
 function getWords() {
     return quotes[Math.floor(Math.random() * (quotes.length - 0) + 0)];
 }
+
+/* Infinite Loading :) */
