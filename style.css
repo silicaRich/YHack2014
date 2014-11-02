@@ -15,6 +15,7 @@ section.promo {
 .promo img {
     display: block;
     margin: auto;
+    width:auto;
     height:100px;
 }
 
