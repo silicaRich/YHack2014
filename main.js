@@ -3,11 +3,11 @@ var shows = { "response": { "Shows": [{ "id": "2827cc62-ecfd-11e0-aca6-0026b9414
 function displayShows() {
 
     //  $.get("http://104.236.61.90/shows", function (data) {
-    $("#results").append('<h1>Shows for <span class="text-changer">You</span>.</h1>');
+    $("#results").append('<h1>TV for <span class="text-changer">You</span>.</h1>');
     $(shows.response.Shows).each(function (key, value) {
         var imgUrls = getImages(value, false);
 
-        $("#results").append('<div class="show"><p>' + value.Title + '</p>' + '<p>' + value.Description + '</p>' + imgUrls + '</div>');
+        $("#results").append('<div class="show"><p class="show-title">' + value.Title + '</p>' + '<p>' + value.Description + '</p>' + imgUrls + '</div>');
 
         function getImages(images, bannerBool) {
             var counter = 0;
@@ -97,6 +97,7 @@ var quotes = [
     , 'fashion'
     , 'the endless explorer'
     , 'discovering culture'
+    , 'game changers'
     , 'learning'
     , 'action'
 ];

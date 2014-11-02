@@ -23,6 +23,10 @@ section.promo {
     width:100%;
     }
 
+.show-title {
+font-size:20px;
+}
+
 .viacom-logo {
     display: block;
     margin: 20px auto;
@@ -56,6 +60,23 @@ margin: 0 20px 20px 20px;
     display: inline-block;
     vertical-align: top;
 }
+
+body > div.header > section > h2 {
+    margin-bottom: 60px;
+}
+
+#submit {
+    border-radius: 10px;
+    border: 1px solid #262626;
+    padding: 7px 10px;
+    color: white;
+    text-decoration: none;
+    background: #262626;
+}
+
+    #submit:hover {
+    margin-top:1px;
+    }
 
     div.show img {
         width: 100%;

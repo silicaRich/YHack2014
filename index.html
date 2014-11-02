@@ -13,11 +13,14 @@
         <br />
         <br />
         <section class="promo">
-            <h1><img src="tv.png" width="150" height="150"/>TV Guide: </h1>
+            <h1><img src="tv.png" width="150" height="150"/>TV Guide</h1>
 			<!-- Television designed by Elena Canton from the thenounproject.com -->
 			            <h2>Find excellent shows.</h2>
-            <input type="text" id="TVShow" placeholder="Discover your new show" />
-            <a href="#results"><input type="submit" id="Submit" value="Submit"></a>
+          <!--  <input type="text" id="TVShow" placeholder="Discover your new show" />
+            <a href="#results"><input type="submit" id="Submit" value="Submit"></a> -->
+
+            <a href="#results" id="submit">Try it out</a>
+
         </section>
     </div>
 
@@ -28,13 +31,13 @@
     <div id="results"></div>
 
     <footer>
-
+        
         <img src="viacom_logo.png" class="viacom-logo"/>
 
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="d3.min.js" charset="utf-8"></script>
         <script type="text/javascript" src="main.js"></script>
-    <script>$('input#submit').click(function () { displayShows();});</script>
+    <script>$('#submit').click(function () { displayShows();});</script>
     </footer>
 
 </body>
