@@ -23,6 +23,11 @@ section.promo {
     width:100%;
     }
 
+.viacom-logo {
+    display: block;
+    margin: 20px auto;
+}
+
 
     body {
     background-color: #262626;
