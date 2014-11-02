@@ -3,44 +3,32 @@ var shows = { "response": { "Shows": [{ "id": "2827cc62-ecfd-11e0-aca6-0026b9414
 function displayShows() {
 
     //  $.get("http://104.236.61.90/shows", function (data) {
-
+    $("#results").append('<h1>Shows for <span class="text-changer">You</span>.</h1>');
     $(shows.response.Shows).each(function (key, value) {
         var imgUrls = getImages(value, false);
-        // console.log(imgUrls);
 
         $("#results").append('<div class="show"><p>' + value.Title + '</p>' + '<p>' + value.Description + '</p>' + imgUrls + '</div>');
 
         function getImages(images, bannerBool) {
-            //   console.log("in get images");
             var counter = 0;
             var array = [];
             var urls = "";
             $(images.Images).each(function (key, value) {
                 if (!bannerBool) { // if we're trying not to display the banner images.
-                    //  console.log("banner-bool", bannerBool);
                     if (((value.URL).indexOf("banners") == -1) && ((value.URL).indexOf("header") == -1) && ((value.URL).indexOf("banner") == -1) && ((value.URL).indexOf("Header") == -1)) {
-                   //     console.log((value.URL).indexOf("banner"));
-                  //      console.log("in the !=banner", value.URL);
                         array.push(value.URL);
                         urls = urls + '<img src="' + value.URL + '">';
                     }
-                //    console.log((value.URL).indexOf("banner") == -1);
                 }
                 else {
                     array.push(value.URL);
                     urls = urls + '<img src="' + value.URL + '">';
                     console.log("hi");
-                    //  console.log(value.URL);
                 }
-                //    console.log(urls, "URLS");
                 counter++;
             });
             return urls;
-            //    console.log(counter);
         }
-
-        //console.log( value.Title);
-        //console.log( value.Description);
     });
 
 
@@ -95,3 +83,31 @@ $(function () {
         }
     });
 });
+
+
+/*Fun changing word*/
+
+//Random quote display
+var quotes = [
+    'a rainy day'
+    , 'a sunny day'
+    , 'your day off'
+    , 'treating yoself'
+    , 'laughs'
+    , 'fashion'
+    , 'the endless explorer'
+    , 'discovering culture'
+    , 'learning'
+    , 'action'
+];
+
+$('span.text-changer').text(getWords());
+
+setInterval(function(){ 
+    $('span.text-changer').text(getWords());
+    //  $('.load-quote').addClass("fa-spin");
+},2000);
+
+function getWords() {
+    return quotes[Math.floor(Math.random() * (quotes.length - 0) + 0)];
+}
