@@ -44,7 +44,8 @@ section.promo {
 
 
 div.show {
-    width: 200px;
+    width: 20%;
+margin: 0 20px 20px 20px;
     display: inline-block;
     vertical-align: top;
 }
