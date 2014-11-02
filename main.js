@@ -113,3 +113,9 @@ function getWords() {
 }
 
 /* Infinite Loading :) */
+
+$(document).ready(function () {
+    var $el = $('#results');
+    var listView = new infinity.ListView($el);
+
+});
