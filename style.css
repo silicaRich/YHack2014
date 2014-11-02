@@ -139,6 +139,12 @@ input {
     src: url('OpenSans-LightItalic.ttf') format('truetype');
 }
 
+p.sort {
+    text-align: right;
+    font-size: 20px;
+    margin-right: 100px;
+}
+
 
 @media (max-width:440px) {
     .show {
@@ -147,8 +153,11 @@ input {
     body {
         font-size: 75%!important;
     }
-
+    p.sort {
+        text-align: center;
+    margin-right:0;
+        }
     .show-title {
         font-size: 20px;
-    }1
+    }
 }

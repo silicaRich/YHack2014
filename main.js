@@ -3,7 +3,7 @@ var shows = { "response": { "Shows": [{ "id": "2827cc62-ecfd-11e0-aca6-0026b9414
 function displayShows() {
 
     //  $.get("http://104.236.61.90/shows", function (data) {
-    $("#results").append('<h1>TV for <span class="text-changer">You</span>.</h1>');
+    $("#results").append('<h1>TV for <span class="text-changer">You</span>.</h1><p class="sort">Sort By: <span class="alphabetical">Alphabetical</span></p>');
     $(shows.response.Shows).each(function (key, value) {
         var imgUrls = getImages(value, false);
 
@@ -120,3 +120,5 @@ $(document).ready(function () {
     var listView = new infinity.ListView($el);
 
 });
+
+
